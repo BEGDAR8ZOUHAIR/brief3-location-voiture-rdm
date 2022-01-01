@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The GYM - HomePage</title>
+  <title>Rent Me Now </title>
 
   <!-- Main Style -->
   <link rel="stylesheet" href="./css/style.css">
@@ -11,11 +12,16 @@
   <link rel="stylesheet" href="./css/widescreen.css" media="screen and (min-width: 1100px)">
   <!-- Smartphone Style -->
   <link rel="stylesheet" href="./css/mobile.css" media="screen and (max-width: 768px)">
+
+  <link rel="stylesheet" href="./css/reservation.css">
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 </head>
+
 <body id="home">
-  
+
   <!-- Navbar -->
-  <nav  id="navbar" class="bg-dark">
+  <nav id="navbar" class="bg-dark">
     <div class="logo">
       <a href="/index.html"><img src="./img/car logo.png" alt="GYM Logo"></a>
     </div>
@@ -28,13 +34,116 @@
       <li><a href="./contact.html">Contact</a></li>
     </ul>
   </nav>
+  <h1> Reserver now </h1>
+
+  </div>
+  <form action="" style="text-align: center;">
+    <div class="grid-container">
+      <div class="item">
+        <img src="img/3 MOTO.jfif" alt="" id="moto" onclick="validerImages('moto')" />
+      </div>
+
+      <div class="item">
+        <img src="img/1 COMPACT.jfif" alt="" id="compact" onclick="validerImages('compact')" />
+      </div>
+
+      <div class="item">
+        <img src="img/1  Citadins.jfif" alt="" id="citadin" onclick="validerImages('citadin')" />
+      </div>
+
+      <div class="item">
+        <img src="img/1 utilitaire.jfif" alt="" id="utilitaire" onclick="validerImages('utilitaire')" />
+      </div>
+    </div>
+    </div>
+    <div class="grid-container">
+      <div class="item">
+        <img src="img/1 berlin.jfif" alt="" id="berlin" onclick="validerImages('berlin')" />
+      </div>
+
+      <div class="item">
+        <img src="img/1 camions.jfif" alt="" id="camion" onclick="validerImages('camion')" />
+      </div>
+
+      <div class="item">
+        <img src="img/2 engins des chantier.jfif" alt="" id="engin" onclick="validerImages('engin')" />
+      </div>
+
+    </div>
+
+    <!-- type matricule -->
+
+    <div class=" tableInput" style="color: aliceblue;">
+      <div class="tdInput">
+        <label class="btnInput">
+          <input type="radio" name="carburant" id="essence" value="essence">Essence
+        </label>
+      </div>
+      <div class="tdInput">
+        <label class="btnInput">
+          <input type="radio" name="carburant" id="diesel" value="diesel">Diesel
+        </label>
+      </div>
+      <div class="tdInput">
+        <label class="btnInput">
+          <input type="radio" name="carburant" id="electrique" value="electrique">Electrique
+        </label>
+      </div>
+      <div class="tdInput">
+        <label class="btnInput">
+          <input type="radio" name="carburant" id="hybride" value="hybride">Hybride
+        </label>
+      </div>
+
+
+    </div>
+    <div class="tableInput" style="color: aliceblue;">
+      <div class="tdInput">
+      <label class="btnInput">
+        <input type="radio" name="Boite" id="manuelle" value="manuelle">Manuelle
+      </label>
+      </div>
+      <div class="tdInput">
+      <label class="btnInput">
+        <input type="radio" name="Boite" id="automatique" value="automatique">Automatique
+      </label>
+      </div>
+
+    </div>
+
+    <div class="tyape" style="color: aliceblue;">
+      <label class="btnInput">Nombre de jours
+        <input class="input" type="number" id="nbJour" value="1" min="1">
+      </label>
+    </div>
+
+    <div class="divTotal">
+      <label>Prix total</label>
+      <span id="result"></span>
+    </div>
+
+    <input class="reserverBtn" type="button" id="btnCalculer" value="RESERVER MAINTENANT" onclick="calculer()">
+
+
+  </form>
 
 
   <!-- Footer -->
   <footer class="text-center py-1 bg-dark">
-    <p>Copyright &copy; 2020, The GYM, All Rights Reserved</p>
+    <p>Copyright &copy; 2020, RentMeNow, All Rights Reserved</p>
+
+    <div class="footer-icons">
+
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-linkedin"></i></a>
+      <a href="#"><i class="fa fa-github"></i></a>
+
+  </div>
   </footer>
 
- 
+  <script src="js/main.js"></script>
+
 </body>
+
 </html>

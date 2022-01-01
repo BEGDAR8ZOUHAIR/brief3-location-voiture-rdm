@@ -1,0 +1,56 @@
+.input{
+    margin: 0px 5px 30px 5px;
+    padding-left: 10px;
+    border: 1px solid #2B2C43;
+    background: #2B2C43;
+    height: 43px;
+    width: 283px;
+    color: aliceblue;
+    border-radius: 2px;
+    box-shadow: 3px 3px 6px rgb(0 0 0 / 45%);
+    
+}
+
+
+.tableInput{
+    display: flex;
+   width: 600px;
+       margin: auto;
+   margin-bottom: 30px;
+}
+.tdInput{
+   padding: 10px;
+   margin: 1px;
+   font-size: 15px;
+   width: 100%;
+   background: #2B2C43;
+   color: aliceblue;
+   border-radius: 2px;
+   box-shadow: 3px 3px 6px rgb(0 0 0 / 45%);
+}
+.tdInput:hover{
+   background: #23527C;
+   box-shadow: 0 0 0;
+}
+.tdInput:focus{
+   background: #fff;
+   box-shadow: 0 0 0;
+}
+.tdInput label {
+   cursor: pointer;
+}
+
+
+.divTotal{
+   color: aliceblue;
+   font-size: 20px;
+}
+
+.reserverBtn{
+   padding: 10px 20px;
+   background-color: #09bebb;
+   color: aliceblue;
+   border: none;
+   border-radius: 5px;
+   margin: 16px 0;
+}
