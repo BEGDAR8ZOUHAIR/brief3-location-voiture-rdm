@@ -115,10 +115,8 @@ footer{
   margin-bottom: 1.5rem;
 }
 
-.box-shadow {
-  box-shadow: 0 0 2px #252a34;
-}
-/* Section: Navbar */
+
+/* Section: Navbar ================================*/
 #navbar {
   display: flex;
   justify-content: space-between;
@@ -149,7 +147,7 @@ footer{
   border-radius: 5px;
 }
 
-/* Showcase */
+/* Showcase ====================================== */
 #showcase {
   background: #252a34 url(../img/car\ lumier\ red.jpg) no-repeat center
     center/cover;
@@ -168,35 +166,33 @@ footer{
   /* overlay */
   background-color: rgba(0, 0, 0, 0.8);
 }
-/* logo about */
+
+/* about =============================== */
+
+
 .logoabout {
-  width: 200px;
-  display: block;
-  margin-left: 15%;
-
-  align-items: center;
-}
-
-/* Section: About */
-#about .about-content {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  width: 400px;
+ margin: auto;
+}
+.carabout{
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 20px;
+
+}
+.sponsor{
+  /* width: 50px; */
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 auto;
+}
+.sponsor img{
+  height: 44px;
+  margin: 40px 0;
 }
 
-#about .about-content div,
-#about .about-content img {
-  flex: 1;
-}
-
-#about .about-content img {
-  display: block;
-  width: 50%;
-
-  margin-left: 1rem;
-}
-
-/* Contact  */
+/* Contact =====================================  */
 #contact {
   display: flex;
 }

@@ -30,6 +30,7 @@
   margin: 1rem 0 0 0;
 }
 
+
 /* Programs */
 #programs .boxes {
   display: block;
@@ -80,4 +81,18 @@
   #cta .cta-content {
     min-height: 400px;
    }
+   .logoabout{
+    display: flex;
+    width: 200px;
+   margin: auto;
+  }
+
+  .sponsor{
+    /* width: 50px; */
+    display: block;
+    
+  }
+
 }
+
+
