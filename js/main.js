@@ -37,6 +37,14 @@ function validateForm() {
       message
   );
 }
+
+
+
+
+
+
+
+
 // reservation
 
 var typeVehicule = [
@@ -51,9 +59,10 @@ var typeVehicule = [
 
   var carburant = [
     { type: "essence", pourcantage: 0.14 },
-  { type: "diesel", pourcantage: 0.21 },
-  { type: "electrique", pourcantage: 0.05 },
-  { type: "hybride", pourcantage: 0.09 },
+    
+    { type: "diesel", pourcantage: 0.21 },
+    { type: "electrique", pourcantage: 0.05 },
+    { type: "hybride", pourcantage: 0.09 },
   ];
 
   var boite = [
@@ -74,7 +83,6 @@ var typeVehicule = [
 
   //Checked radio ===========================
 
- 
   function radioChecked(){
     radioEssence.checked = false;
     radioDiesel.checked = false;
@@ -91,6 +99,7 @@ var typeVehicule = [
        for (i=0 ; i< typeVehicule.length;i++){
          if (typeVehicule[i].type==type){
           prixTypeVehicule = typeVehicule[i].prix;
+          console.log(prixTypeVehicule);
          }
        }
      }
@@ -100,6 +109,7 @@ var typeVehicule = [
         for (i = 0; i < carburant.length; i++) {
           if (carburant[i].type == radio) {
             pourcentageCarburant = carburant[i].pourcantage;
+            console.log(pourcentageCarburant);
           }
         }
       }
@@ -109,7 +119,6 @@ var typeVehicule = [
         for (i = 0; i < boite.length; i++) {
           if (boite[i].type == radio) {
             pourcentageBoite = boite[i].pourcantage;
-            console.log(pourcentageBoite);
           }
         }
       }
@@ -125,6 +134,7 @@ var typeVehicule = [
       }
     }
 
+    // function pricipale -----------------------------------
     
 function validerImages(type) {
   typeSelectionner = type;
@@ -170,7 +180,7 @@ function validerImages(type) {
     calculePrixTypeVehicule(typeSelectionner);
     activerBorder(typeSelectionner);
   } else if (type == "berlin") {
-    radioChecked();
+    radioChecked(); 
     radioEssence.disabled = false;
     radioElectrique.disabled = true;
     radioDiesel.disabled = false;
@@ -223,13 +233,9 @@ function calculer() {
       getPourcentageBoite(radioManuelle.value);
     } else if (radioAutomatique.checked == true) {
       getPourcentageBoite(radioAutomatique.value);
-    } else if (
-      radioManuelle.checked == false &&
-      radioAutomatique.checked == false &&
-      typeSelectionner == "moto"
-    ) {
+    } else if (radioManuelle.checked == false && radioAutomatique.checked == false && typeSelectionner == "moto" ) {
       res = parseFloat(
-        (parseFloat(prixTypeVehicule) + parseFloat(pourcentageCarburant)) * parseFloat(nombreJours)
+        (parseFloat(prixTypeVehicule) + parseFloat(prixTypeVehicule) * parseFloat(pourcentageCarburant)) * parseFloat(nombreJours)
       );
       document.getElementById("result").innerHTML = res;
     } else {
@@ -240,7 +246,9 @@ function calculer() {
       (parseFloat(prixTypeVehicule) + parseFloat(prixTypeVehicule) * parseFloat(pourcentageCarburant) + (parseFloat(prixTypeVehicule) *  parseFloat(pourcentageBoite))) * parseFloat(nombreJours)
       );
       
-    document.getElementById("result").innerHTML = res;
+    if(res){
+      document.getElementById("result").innerHTML = res;
+    }
   } else {
     alert("vous devez selectionner type de vehicule");
   }
